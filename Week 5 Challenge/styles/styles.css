@@ -1,0 +1,29 @@
+body
+    header {
+        margin: 0 auto;
+        text-align: center;
+    }
+    #desk {
+        border-radius: 50%;
+        border-width: 25px;
+        border-color: #444444;
+        display: inline;
+        max-width: 30%;
+    }
+    #graphic {
+        border-radius: 50%;
+        border-width: 25px;
+        border-color: #444444;
+        display: inline;
+        max-width: 30%;
+    }
+    #person {
+        border-radius: 50%;
+        border-width: 25px;
+        border-color: #444444;
+        display: inline;
+        max-width: 30%;
+    }
+    footer {
+        background-color: #737373;
+    }
