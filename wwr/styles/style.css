@@ -1,10 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Oswald:wght@600&family=Public+Sans:wght@600&family=Rubik:wght@600&display=swap");
 :root {
+    --heading-font: "Rubik";
+    --paragraph-font: "Oswald";
+
   --primary-color: #30362F   ;
   --secondary-color: #625834 ;
   --accent1-color: #FFFBDB;
   --accent2-color: #DA7422;
+
+  
 }
 body {
+    
     background-color: #30362f;
 }
 header {
