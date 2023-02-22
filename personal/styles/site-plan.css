@@ -2,16 +2,22 @@
 Any spaces in your font name should be replaced with a +. 
 Fonts are separated by a | */
 @font-face {
-    font-family: 'aquilinetworegular';
-    src: url('fonts/AquilineTwo-webfont.eot');
-    src: url('AquilineTwo-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/AquilineTwo-webfont.woff2') format('woff2'),
-         url('fonts/AquilineTwo-webfont.woff') format('woff'),
-         url('fonts/AquilineTwo-webfont.ttf') format('truetype'),
-         url('fonts/AquilineTwo-webfont.svg#aquilinetworegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'aquilinetwo';
+  src: url('../fonts/AquilineTwo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'dobkin';
+  src: url('../fonts/DobkinPlain-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'chanticleer';
+  src: url('../fonts/Chanticleer-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 :root {
   /* change the values below to your colors from your palette */
@@ -22,8 +28,9 @@ Fonts are separated by a | */
   --accent3-color: #2e8576;
 
   /* change the values below to your chosen font(s) */
-  --heading-font: "aquilinetworegular";
-  --paragraph-font: Lato, Helvetica, sans-serif;
+  --heading-font: 'dobkin';
+  --h1-font: 'aquilinetwo';
+  --paragraph-font: 'chatincleer', Helvetica, sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
   --headline-color-on-white: #396E94;  /* headlines on a white background */ 
@@ -51,11 +58,13 @@ img {
   display: block;
   margin: 0 auto;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: "aquilinetworegular", serif;
-  color: var(--headline-color-on-white);
+h1, h3, h4, h5, h6 {
+  font-family: 'aquilinetwo';
+  color: var(--headline-color-on-white)
 }
 h2 {
+  font-family: 'dobkin';
+  color: var(--headline-color-on-white);
   text-align: center;
 }
 hr {
@@ -74,7 +83,7 @@ header > h1, header > h2 {
 }
 
 p {
-  font-family: var(--paragraph-font);
+  font-family: 'chanticleer';
   color: var(--paragraph-color-on-white);
   padding: 1em;
 }
