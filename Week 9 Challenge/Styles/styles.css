@@ -1,0 +1,11 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+main {
+    background-color: black;
+}
+body {
+    background-color: white;
+    grid-column: 2;
+}
