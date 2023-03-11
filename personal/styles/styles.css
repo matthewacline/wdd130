@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'aquilinetwo';
+    src: url('../fonts/AquilineTwo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dobkin';
+    src: url('../fonts/DobkinPlain-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'chanticleer';
+    src: url('../fonts/Chanticleer-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    --primary-color: #193833;
+    --secondary-color: #853d21;
+    --accent1-color: #382219;
+    --accent2-color: #49857b;
+    --accent3-color: #2e8576;
+  
+    --heading-font: 'dobkin';
+    --h1-font: 'aquilinetwo';
+    --paragraph-font: 'chatincleer', Helvetica, sans-serif;
+  
+    --headline-color-on-white: #382219;  /* headlines on a white background */ 
+    --headline-color-odevice-widthn-color: white; /* headlines on a colored background */ 
+    --paragraph-color-on-white: #382219; /* paragraph text on a white background */ 
+    --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+    --paragraph-background-color: #193833  ;
+    --nav-link-color: #49857b;
+    --nav-background-color: #853d21;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: #382219;
+}
