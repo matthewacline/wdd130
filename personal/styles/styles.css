@@ -28,12 +28,109 @@
     --paragraph-font: 'chatincleer', Helvetica, sans-serif;
   
     --headline-color-on-white: #382219;  /* headlines on a white background */ 
-    --headline-color-odevice-widthn-color: white; /* headlines on a colored background */ 
+    --headline-color-on-device-width-color: white; /* headlines on a colored background */ 
     --paragraph-color-on-white: #382219; /* paragraph text on a white background */ 
     --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
-    --paragraph-background-color: #193833  ;
-    --nav-link-color: #49857b;
+    --paragraph-background-color: #49857b;
+    --nav-link-color: #193833;
     --nav-background-color: #853d21;
-    --nav-hover-link-color: white;
-    --nav-hover-background-color: #382219;
+    --nav-hover-link-color: #193833;
+    --nav-hover-background-color: white;
+}
+.home_content {
+    margin: 0;
+    padding: 0;
+    
+}
+.cover {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url("../images/Homepage_Cover.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.logo {
+    max-width: 250px;
+}
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative; 
+}
+.navbar ul li a {
+    font-family: 'aquilinetwo';
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+.navbar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #853d21;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.navbar ul li:hover:after {
+    width: 100%;
+}
+/*.navbar ul li a:link { 
+    text-decoration: none; 
+}
+.navbar ul li a:visited { 
+    text-decoration: none; 
+}
+.navbar ul li a:hover {
+    text-decoration: underline;
+    color: white;
+    background-color: none;
+}
+.logo:hover {
+
+}
+.navbar ul li a:active { 
+    text-decoration: none; 
+}
+*/
+
+/*
+{
+    background-color: #49857b;
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+{
+    background-color: #382219;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4em;
+    font-size: 18px;
+    text-align: center;
+}
+
+{
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'aquilinetwo';
+    color: var(--headline-color-on-white)
+}
+
+p {
+    font-family: 'chanticleer';
+    color: var(--paragraph-color-on-white);
+    padding: 1em;
 }
