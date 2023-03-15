@@ -44,7 +44,9 @@
 }
 .cover {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url("../images/Homepage_Cover.jpg");
     background-size: cover;
     background-position: center;
@@ -54,10 +56,10 @@
 }
 .navbar {
     width: 85%;
-    margin: auto;
+    margin-bottom: auto;
     padding: 35px 0;
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: space-between;
 }
 .navbar ul li {
@@ -85,6 +87,40 @@
 .navbar ul li:hover:after {
     width: 100%;
 }
+.home_footer {
+    width: 85%;
+    margin-bottom: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
+.home_footer ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative; 
+}
+.home_footer ul li a {
+    font-family: 'dobkin';
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.home_footer ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #853d21;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.home_footer ul li:hover:after {
+    width: 100%;
+}
 /*.navbar ul li a:link { 
     text-decoration: none; 
 }
@@ -102,8 +138,11 @@
 .navbar ul li a:active { 
     text-decoration: none; 
 }
-*/
 
+.home_footer .social img {
+    padding-top: 15px;
+}
+*/
 /*
 {
     background-color: #49857b;
@@ -128,9 +167,41 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'aquilinetwo';
     color: var(--headline-color-on-white)
 }
-
+*/
 p {
     font-family: 'chanticleer';
-    color: var(--paragraph-color-on-white);
+    color: white;
     padding: 1em;
+}
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;
+    }
+    .cover, nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    #hero {
+        margin-top: 0;
+    }
+    #hero-msg {
+        margin-top: 0;
+    }
+    #hero-msg h4 {
+        display: none;
+    }
+    .home-title {
+        font-size: 25px;
+        color: #6f7364;
+    }
+    #background {
+        display: none;
+    }
+    footer {
+        margin-top: 25px;
+    }
 }
