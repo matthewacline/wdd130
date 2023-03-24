@@ -4,24 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.K.Cline Artworks</title>
+    <title>Lexi K. Cline Fine Art</title>
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
+        <nav class="navbar">
         <a id="logo_link" href="index.html">
-            <img class="logo" src="images/cline's cottage-logos.jpeg" 
+            <img class="logo" src="images/cline's cottage-logos_transparent.png" 
             alt="Cline's Cottage logo">
         </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="lexi.html">A. K. Cline Artworks</a>
-            <a href="matthew.html">Matthew's Woodworks</a>
-            <a href="jenni.html">Jenniflower's Creations</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="matthew.html">Matthew's Works</a></li>
+                <li><a href="jenni.html">Jenniflower's Creations</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <section class="hero">
+         <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/DarkeCo_Fair.jpeg" style="width:100%">
+      <div class="text">Plan Air at the Great Darke County Fair</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/Beneath_The_Oak.jpg" style="width:100%">
+      <div class="text">Beneath The Oak</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/Hold_Fast.jpg" style="width:100%">
+      <div class="text">Hold Fast</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="images/The_Olive_Grove.jpeg" style="width:100%">
+        <div class="text">The Olive Grove</div>
+      </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div> 
+<script>
+    let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+} 
+</script>
+      <!-- <section class="hero">
             <img src="images/DarkeCo_Fair.jpeg" alt="hero-img">
         </section>
         <section class="examples">
@@ -34,7 +91,7 @@
             <div id="l3">
                 <img src="images/The_Olive_Grove.jpeg" alt="The_Olive_Grove">
             </div>
-        </section>
+        </section>--> 
         <section class="bio">
             <h1>A. K. Cline</h1>
             <p>A.K. Cline was born in Grand Junction, Colorado and grew up in various places in Colorado and Utah. 
