@@ -22,7 +22,64 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <h6>Jenniflower</h6>
+                <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="images/Flowers1.jpeg" style="width:100%">
+      <div class="text">Flowers 1</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="images/Flowers2.jpeg" style="width:100%">
+      <div class="text">Flowers 2</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div> 
+<script>
+ let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+</script>
+       <!-- <section class="hero">
             <img src="images/Flowers1.jpeg" alt="hero-img">
         </section>
         <section class="examples">
@@ -35,17 +92,17 @@
             <div id="j3">
                 <img src="" alt="placeholder">
             </div>
-        </section>
+        </section>-->
         <section class="bio">
             <h1>Jenniflower</h1>
-            <p>Jenniflower is the mother of A.K. Cline and an enthusiastic lover of all things nature. Early in her adult 
+            <p>Jenniflower is the mother of Lexi K. Cline and an enthusiastic lover of all things nature. Early in her adult 
                 life, she was the head of a small landscaping company in Colorado. Later, she showed her talent for flower 
                 arranging, working as a freelancer and donating much of her time and effort to memorial ceremonies in the 
                 Salt Lake area of Utah. She’s always had a creative mind, making small trinkets and jewelry from found materials 
                 in her spare time. Her proudest creations are her stained glass panels, whether in the form of windows, wall 
                 hangings, or garden sculptures.</p>
         </section>
-        <div class="bottom"><
+        <div class="bottom">
         <div class="contact">
             <h2>Send Email to:</h2>
             <p>Jenniflower@ClinesCottage.com</p>
@@ -77,8 +134,10 @@
         </div>
     </main>
     <footer>
-        <p>Cline's Cottage and Affiliates &copy; 2023 - Matthew Cline</p>
-        <p><a href="site-plan.html">Site Plan</a></p>
+        <ul>
+        <li>Cline's Cottage and Affiliates &copy; 2023 - Matthew Cline</li>
+        <li><a href="site-plan.html">Site Plan</a></li>
+        </ul>
     </footer>
 </body>
 </html>

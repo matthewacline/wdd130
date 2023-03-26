@@ -16,13 +16,70 @@
         </a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="lexi.html">Lexi K. Cline fine Art</a></li>
+                <li><a href="lexi.html">Lexi K. Cline Fine Art</a></li>
                 <li><a href="jenni.html">Jenniflower's Creations</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <h6>Matthew's Works</h6>
+                <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="images/Woodworking.jpeg" style="width:100%">
+      <div class="text">Building a bed frame</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="images/Garden.jpeg" style="width:100%">
+      <div class="text">Our Garden</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+   <span class="dot" onclick="currentSlide(4)"></span>
+  </div> 
+<script>
+ let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+</script>
+        <!-- <section class="hero">
             <img src="images/Woodworking.jpeg" alt="hero-img">
         </section>
         <section class="examples">
@@ -35,10 +92,10 @@
             <div id="m3">
                 <img src="" alt="placeholder">
             </div>
-        </section>
+        </section> -->
         <section class="bio">
             <h1>Matthew Cline</h1>
-            <p>Matthew Cline is husband to artist A.K. Cline. He grew up in Arcanum, Ohio and graduated 
+            <p>Matthew Cline is husband to artist Lexi K. Cline. He grew up in Arcanum, Ohio and graduated 
                 from the local high school in 2010. Since then he has explored a couple different collegiate paths until 
                 settling on Applied Tech in the IT industry at BYU-Idaho. He has been dabbling in a number of different 
                 hobbies for most of his adult life. He has been deeply engaged with woodworking for the past couple of years, 
@@ -48,7 +105,7 @@
                 garden with his wife at their new property, where they can grow fresh fruits and vegetables to feed their family, 
                 sell the excess, and distill many of the flowers, herbs, and other products into essential oils. Matthew also 
                 has crochet experience and has most recently made a baby blanket for his daughter! Lastly, he plans to frame 
-                each one of his wife’s paintings with custom frames, made right in the home shop. A.K. Cline worked as a 
+                each one of his wife’s paintings with custom frames, made right in the home shop. Lexi K. Cline worked as a 
                 professional custom framer for nearly a decade and has done museum-quality work countless times. With their 
                 knowledge combined, these two are an unstoppable creative force!</p>
                 <p>Also, Vlogs!</p>
@@ -85,8 +142,10 @@
         </div>
     </main>
     <footer>
-        <p>Cline's Cottage and Affiliates &copy; 2023 - Matthew Cline</p>
-        <p><a href="site-plan.html">Site Plan</a></p>
+        <ul>
+        <li>Cline's Cottage and Affiliates &copy; 2023 - Matthew Cline</li>
+        <li><a href="site-plan.html">Site Plan</a></li>
+        </ul>
     </footer>
 </body>
 </html>

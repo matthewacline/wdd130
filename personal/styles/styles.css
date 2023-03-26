@@ -149,6 +149,43 @@ body {
 .home_footer ul li:hover:after {
     width: 100%;
 }
+footer {
+    width: 85%;
+    margin-bottom: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: top;
+    justify-content: space-around;
+}
+footer ul li {
+    font-family: 'aquilinetwo';
+    color: var(--paragraph-background-color);
+    font-size: 30px;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative; 
+}
+footer ul li a {
+    font-family: 'dobkin';
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #853d21;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+footer ul li:hover:after {
+    width: 100%;
+}
 header {
     background-color: #193833;
 }
@@ -276,7 +313,7 @@ header {
     display: block;
     margin: 0 auto;
 }*/
-h1, h4, h5, h6 {
+h1, h4, h5 {
     font-family: 'aquilinetwo';
     color: var(--headline-color-on-device-width-color)
 }
@@ -284,7 +321,12 @@ h2, h3 {
     font-family: 'dobkin';
     color: var(--paragraph-background-color);
 }
-
+h6 {
+    font-family: 'aquilinetwo';
+    font-size: 40px;
+    text-align: center;
+    color: var(--headline-color-on-device-width-color)
+}
 p {
     font-family: 'chanticleer';
     color: white;
