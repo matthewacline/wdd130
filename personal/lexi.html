@@ -31,10 +31,10 @@
       <img src="images/DarkeCo_Fair.jpeg" style="width:100%">
       <div class="text">Plan Air at the Great Darke County Fair</div>
     </div>
-  
+
     <div class="mySlides fade">
       <div class="numbertext">2 / 4</div>
-      <img src="images/Beneath_The_Oak.jpg" style="width:100%">
+      <img src="images/Beneath_The_Oak.jpg" style="width:100%" alt="Beneath_The_Oak">
       <div class="text">Beneath The Oak</div>
     </div>
   
@@ -63,19 +63,33 @@
     <span class="dot" onclick="currentSlide(4)"></span>
   </div> 
 <script>
-    let slideIndex = 0;
-showSlides();
+ let slideIndex = 1;
+showSlides(slideIndex);
 
-function showSlides() {
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
+  dots[slideIndex-1].className += " active";
 } 
 </script>
       <!-- <section class="hero">
@@ -106,25 +120,36 @@ function showSlides() {
                 University in Dayton, Ohio where she majored in Art and Sculpture, with a minor in art history. She 
                 graduated with her Bachelors Degree in 2020. She’s married to her husband Matthew, and has a daughter, Alanna.</p>
         </section>
-        <section class="contact">
+    <div class="bottom">
+        <div class="contact">
             <h2>Send Email to:</h2>
             <p>AKCline@ClinesCottage.com</p>
+            <br>
             <h3>Contact by post!</h3>
             <p>Cline's Cottage</p>
-            <p>P.O. Box 123</p>
-            <P>Anytown, AK 00000</P>
-        </section>
-        <div class="social">
-            <a href="https://www.facebook.com/" target="_blank">
-                <img src="images/facebook.png" alt="fb icon">
-            </a>
-            <a href="https://twitter.com/" target="_blank">
-                <img src="images/twitter.png" alt="twitter icon">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-                <img src="images/instagram.png" alt="instagram icon">
-            </a>
+            <p>P. O. Box 123</p>
+            <p>Anytown, AK 00000</P>
         </div>
+        <div class="social">
+            <ul>
+                <li>
+            <a href="https://www.facebook.com/">
+                <img src="images/facebook.svg" alt="fb icon">
+            </a>
+                </li>
+                <li>
+            <a href="https://twitter.com/">
+                <img src="images/twitter.svg" alt="twitter icon">
+            </a>
+                </li>
+                <li>
+            <a href="https://www.instagram.com/">
+                <img src="images/instagram.svg" alt="instagram icon">
+            </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     </main>
     <footer>
         <p>Cline's Cottage and Affiliates &copy; 2023 - Matthew Cline</p>
