@@ -62,7 +62,6 @@ body {
     margin-bottom: auto;
     padding: 20px 0;
     display: flex;
-    align-items: top;
     justify-content: space-between;
 }
 .navbar nav {
@@ -120,7 +119,6 @@ body {
     margin-bottom: auto;
     padding: 35px 0;
     display: flex;
-    align-items: top;
     justify-content: space-between;
 }
 .home_footer ul li {
@@ -154,7 +152,6 @@ footer {
     margin-bottom: auto;
     padding: 35px 0;
     display: flex;
-    align-items: top;
     justify-content: space-around;
 }
 footer ul li {
@@ -360,7 +357,7 @@ p {
 }
 .social img {
     margin: 0 auto; 
-    size: 2000px;
+    width: 100px;
     padding: 10px;
     justify-content: center;
     align-items: center;
@@ -368,6 +365,7 @@ p {
     align-content: center;
 }
 .social ul {
+    list-style: none;
     display: inline-block;
 }
 @media screen and (max-width: 900px) {
