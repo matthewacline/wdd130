@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jenniflower's Creations</title>
-    <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    <link type="text/css" rel="stylesheet" href="styles/styles.css"> 
 </head>
 <body>
     <header>
@@ -29,13 +29,13 @@
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="images/Flowers1.jpeg" style="width:100%">
+      <img src="images/Flowers1.jpeg" style="width:100%" alt="Flowers1">
       <div class="text">Flowers 1</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="images/Flowers2.jpeg" style="width:100%">
+      <img src="images/Flowers2.jpeg" style="width:100%" alt="Flowers2">
       <div class="text">Flowers 2</div>
     </div>
   
@@ -49,50 +49,7 @@
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
   </div> 
-<script>
- let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-} 
-</script>
-       <!-- <section class="hero">
-            <img src="images/Flowers1.jpeg" alt="hero-img">
-        </section>
-        <section class="examples">
-            <div id="j1">
-                <img src="images/Flowers2.jpeg" alt="Flowers2">
-            </div>
-            <div id="j2">
-                <img src="" alt="placeholder">
-            </div>
-            <div id="j3">
-                <img src="" alt="placeholder">
-            </div>
-        </section>-->
+  <script src="scripts/scripts.js"></script>
         <section class="bio">
             <h1>Jenniflower</h1>
             <p>Jenniflower is the mother of Lexi K. Cline and an enthusiastic lover of all things nature. Early in her adult 
@@ -133,11 +90,11 @@ function showSlides(n) {
         </div>
         </div>
     </main>
-    <footer>
-        <ul>
-        <li>Cline's Cottage and Affiliates &copy; 2023 - Matthew Cline</li>
-        <li><a href="site-plan.html">Site Plan</a></li>
-        </ul>
-    </footer>
+        <footer>
+            <ul>
+            <li>Cline's Cottage and Affiliates &copy; 2023 - Matthew Cline</li>
+            <li><a href="site-plan.html">Site Plan</a></li>
+            </ul>
+        </footer>
 </body>
 </html>
