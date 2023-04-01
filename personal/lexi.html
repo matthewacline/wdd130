@@ -22,14 +22,16 @@
         </nav>
     </header>
     <main>
+        <div class="main_header">
         <h6>Lexi K. Cline Fine Art</h6>
+        </div>
          <!-- Slideshow container -->
 <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="images/DarkeCo_Fair.jpeg" style="width:100%">
+      <img src="images/DarkeCo_Fair.jpeg" style="width:100%" alt="DarkeCo_Fair">
       <div class="text">Plan Air at the Great Darke County Fair</div>
     </div>
 
@@ -41,13 +43,13 @@
   
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="images/Hold_Fast.jpg" style="width:100%">
+      <img src="images/Hold_Fast.jpg" style="width:100%" alt="Hold_Fast">
       <div class="text">Hold Fast</div>
     </div>
 
     <div class="mySlides fade">
         <div class="numbertext"></div>
-        <img src="images/The_Olive_Grove.jpeg" style="width:100%">
+        <img src="images/The_Olive_Grove.jpeg" style="width:100%" alt="The_Olive_Grove">
         <div class="text">The Olive Grove</div>
       </div>
   
@@ -63,50 +65,7 @@
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
   </div> 
-<script>
- let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-} 
-</script>
-      <!-- <section class="hero">
-            <img src="images/DarkeCo_Fair.jpeg" alt="hero-img">
-        </section>
-        <section class="examples">
-            <div id="l1">
-                <img src="images/Beneath_The_Oak.jpg" alt="Beneath_The_Oak">
-            </div>
-            <div id="l2">
-                <img src="images/Hold_Fast.jpg" alt="Hold_Fast">
-            </div>
-            <div id="l3">
-                <img src="images/The_Olive_Grove.jpeg" alt="The_Olive_Grove">
-            </div>
-        </section>--> 
+  <script src="scripts/scripts.js"></script>
         <section class="bio">
             <h1>Lexi K. Cline</h1>
             <p>Lexi K. Cline was born in Grand Junction, Colorado and grew up in various places in Colorado and Utah. 
