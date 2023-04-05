@@ -390,7 +390,7 @@ p {
         display: block;
         height: auto;
     }
-    .cover, .logo, nav, footer, .home_footer {
+    .cover, .logo, nav, footer, .home_footer, .logo_home, .contact, .social {
         flex-direction: column;
     }
     nav a {
