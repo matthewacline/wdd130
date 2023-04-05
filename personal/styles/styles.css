@@ -386,31 +386,31 @@ p {
     display: inline-block;
 }
 @media screen and (max-width: 900px) {
-    #hero, .grid {
+    .home_content, .navbar, .grid {
         display: block;
         height: auto;
     }
-    .cover, nav, footer {
+    .cover, .logo, nav, footer, .home_footer {
         flex-direction: column;
     }
     nav a {
         display: block;
         padding: 15px;
     }
-    #hero {
+    .home_content, .bio {
         margin-top: 0;
     }
-    #hero-msg {
+    .slideshow-container {
         margin-top: 0;
     }
-    #hero-msg h4 {
+    .main_header {
         display: none;
     }
     .home-title {
         font-size: 25px;
         color: #6f7364;
     }
-    #background {
+    .contact, .social{
         display: none;
     }
     footer {
