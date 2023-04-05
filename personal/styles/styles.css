@@ -250,13 +250,24 @@ footer ul li:hover:after {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
+  font-family: 'dobkin';
+  color: #382219;
+  font-size: 50px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
+}
+.darktext {
+    font-family: 'dobkin';
+    color: #fff;
+    font-size: 50px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
 }
 
 /* The dots/bullets/indicators */
@@ -329,9 +340,10 @@ p {
     width: 50%;
     transition: transform .5s;
     box-shadow: 5px 5px 10px #6f7364;
+    opacity: .6;
 }
 .card-picture:hover {
-    opacity: .6;
+    opacity: 100;
     transform: scale(1.1)
 }
 .bio {
@@ -374,7 +386,7 @@ p {
     display: inline-block;
 }
 @media screen and (max-width: 900px) {
-    #hero, .home-grid {
+    #hero, .grid {
         display: block;
         height: auto;
     }
